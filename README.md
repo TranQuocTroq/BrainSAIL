@@ -36,7 +36,7 @@ Given a bag of MRI slices from a patient, predict the presence of one or more of
 
 BrainSAIL decouples feature extraction from classification training, allowing the use of a large-scale foundation model (307M parameters) without GPU memory constraints during training.
 
-![BrainSAIL Architecture](assets/architecture.png)
+![BrainSAIL Architecture](BrainSAIL/assets/architecture.png)
 
 ### Pipeline
 

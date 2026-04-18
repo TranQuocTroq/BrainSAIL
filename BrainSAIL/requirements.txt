@@ -1,0 +1,11 @@
+torch>=2.0.0
+torchvision>=0.15.0
+open_clip_torch>=2.20.0
+nibabel>=5.0.0
+pydicom>=2.4.0
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+Pillow>=10.0.0
+pyyaml>=6.0
+surfa>=0.4.0

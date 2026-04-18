@@ -1,0 +1,16 @@
+class_name,prompt
+Normal,Brain FLAIR MRI with normal parenchyma and dark CSF ventricles
+Normal,FLAIR brain MRI showing no abnormal hyperintense lesions
+Normal,Brain FLAIR MRI displaying uniform signal and dark sulcal CSF
+WMH,Brain FLAIR MRI with periventricular bright white matter hyperintensities
+WMH,FLAIR brain MRI showing scattered deep white matter hyperintense lesions
+WMH,Brain FLAIR MRI displaying confluent bright periventricular signal abnormalities
+Atrophy,Brain FLAIR MRI with enlarged dark ventricles and widened sulci
+Atrophy,FLAIR brain MRI showing prominent dark CSF spaces and cortical thinning
+Atrophy,Brain FLAIR MRI displaying volume loss with expanded dark sulcal spaces
+Old_Lesion,Brain FLAIR MRI with focal hyperintense gliosis and surrounding volume loss
+Old_Lesion,FLAIR brain MRI showing localized bright lesion with encephalomalacia
+Old_Lesion,Brain FLAIR MRI displaying chronic hyperintense scar with adjacent tissue loss
+Special,Brain FLAIR MRI with large hyperintense mass causing surrounding edema
+Special,FLAIR brain MRI showing abnormal bright lesion with mass effect
+Special,Brain FLAIR MRI displaying extensive hyperintensity with midline shift

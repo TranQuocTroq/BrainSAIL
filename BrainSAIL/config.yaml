@@ -1,0 +1,46 @@
+# =============================================================================
+# BrainSAIL Configuration
+# Edit paths and hyperparameters to match your environment before running.
+# =============================================================================
+
+data:
+  dicom_dir:    "data/raw_dicom"           # Directory containing raw DICOM files
+  nii_dir:      "data/nifti"               # Output directory for converted NIfTI files
+  stripped_dir: "data/stripped"            # Output directory after skull stripping
+  features_dir: "data/features"            # Directory for cached .pt feature tensors
+  dataset_csv:  "data/brain_dataset.csv"   # CSV with slide_id and multi-label columns
+  split_dir:    "data/splits"              # Root split directory (contains 4shot/, 8shot/)
+  anchor_path:  "data/text_anchors.pt"     # Pre-built text anchor embeddings [5 x 768]
+
+model:
+  weights_path: "weights/unimed_clip_vit_l14.pt"  # UniMedCLIP ViT-L/14 checkpoint
+  backbone:     "ViT-L-14-336-quickgelu"           # open_clip model name
+  feature_dim:  768
+  num_classes:  5
+  dropout:      0.3
+
+train:
+  seed:       42
+  n_folds:    6
+  max_epochs: 60
+  patience:   10
+  lr:         1.0e-4
+  weight_decay: 0.01
+  n_tta:      5          # Number of Test-Time Augmentation passes
+  noise_std:  0.003      # Gaussian noise std for feature augmentation
+  shot:       4          # Few-shot setting: 4 or 8
+
+preprocess:
+  axis:       2          # MRI slice axis — 0: sagittal, 1: coronal, 2: axial
+  batch_size: 32         # Inference batch size during feature extraction
+  start_idx:  1          # Starting index for patient ID naming (MRI_001, MRI_002, ...)
+
+labels:
+  - Normal
+  - WMH
+  - Atrophy
+  - Old_Lesion
+  - Special
+
+output:
+  results_dir: "results"

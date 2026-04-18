@@ -1,0 +1,55 @@
+# =============================================================================
+# BrainSAIL .gitignore
+# =============================================================================
+
+# Data — never commit patient data or extracted features
+data/raw_dicom/
+data/nifti/
+data/stripped/
+data/features/
+data/splits/
+data/*.csv
+data/*.pt
+data/*.npy
+
+# Model weights — too large for Git (use Git LFS or share separately)
+weights/
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Results
+results/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# SynthStrip script and model (downloaded at runtime)
+mri_synthstrip
+synthstrip.1.pt
